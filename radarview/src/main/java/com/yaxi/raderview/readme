@@ -1,0 +1,16 @@
+# 自定义view
+
+创建一个完全的雷达扫描控件
+自定义view必须要实现构造方法，经验中如果在view内部没有设置size，并且在外部也没有设置一个固定的值，可能会出现没有显示的情况。
+Shader类
+> 在Android中，提供了Shader类专门用来渲染图像以及一些几何图形。
+
+使用Shader类进行图像渲染时，首先需要构建Shader对象，然后通过Paint的setShader()方法来设置渲染对象，最后将这个Paint对象绘制到屏幕上即可。
+Shader类包括了5个直接子类
+BitmapShader 图像渲染
+ComposeShader 混合渲染
+LinearGradient 线性渲染
+RadialGradient 环形渲染
+SweepGradient 梯度渲染
+SweepGradient也称为扫描渲染，是指在某一中心以x轴正方向逆时针旋转一周而形成的扫描效果的渲染形式。
+

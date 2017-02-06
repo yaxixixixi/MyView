@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yaxi.myview.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.yaxi.myview.view.MeasuredView
+                android:id="@+id/cus_view"
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:onClick="open"
+                android:layout_width="wrap_content"
+                android:layout_height="400px" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多选"
+                android:onClick="checkbox"/>
+
+            <com.yaxi.myview.view.CircleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.yaxi.myview.view.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/view"/>
+            <com.yaxi.myview.view.DenseRect
+                android:layout_width="1000px"
+                android:layout_height="1000px" />
+
+            <com.yaxi.myview.view.SpederWeb
+                android:layout_width="400dp"
+                android:layout_height="400dp" />
+
+            <com.yaxi.myview.view.BHeart
+                android:layout_width="400dp"
+                android:layout_height="1400dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
