@@ -15,7 +15,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "mainActivity";
-    private ServiceViewPager mServiceViewPager;
+    private ServiceViewPager pager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: ");
 
 
-        mServiceViewPager = (ServiceViewPager) findViewById(R.id.service_viewpager);
+        pager = (ServiceViewPager) findViewById(R.id.service_viewpager);
 
         ImageView view1 = new ImageView(this);
         ImageView view2 = new ImageView(this);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(view4);
         list.add(view5);
 
-        mServiceViewPager.setPageContent(list);
+        pager.setPageContent(list);
     }
 
 
