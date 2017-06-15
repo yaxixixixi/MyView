@@ -58,5 +58,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this,Check.class));
     }
 
+    public void main(){
+        startActivity(new Intent(MainActivity.this,ExpandableListActivity.class));
+    }
 
 }
