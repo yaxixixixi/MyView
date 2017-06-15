@@ -48,6 +48,24 @@
                 android:layout_width="400dp"
                 android:layout_height="1400dp" />
 
+            <com.yaxi.myview.view.ServiceViewPager
+                android:id="@+id/service_viewpager"
+                android:layout_width="400dp"
+                android:layout_height="400dp">
+
+            </com.yaxi.myview.view.ServiceViewPager>
+
+            <com.yaxi.myview.view.LinearGradientColor
+                android:layout_width="600dp"
+                android:layout_height="400dp" />
+
+            <com.yaxi.myview.view.LightText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="塞纳河畔 品尝我的美"
+                android:textColor="#00ff00"
+                android:textSize="40sp"/>
+
         </LinearLayout>
     </ScrollView>
 

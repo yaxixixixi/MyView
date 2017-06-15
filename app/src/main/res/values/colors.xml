@@ -5,5 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="myCusColor">#009999</color>
     <color name="white">#ffffff</color>
+    <color name="cus">#7fff</color>
+    <color name="black">#000000</color>
 
 </resources>
