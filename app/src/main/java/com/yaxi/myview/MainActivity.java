@@ -58,5 +58,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this,Check.class));
     }
 
+    public void main(){
+        Log.i(TAG, "main: ");
+    }
 
 }
