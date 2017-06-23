@@ -61,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
     public void main(){
         startActivity(new Intent(MainActivity.this,ExpandableListActivity.class));
 
-
-        
     }
 
 }
