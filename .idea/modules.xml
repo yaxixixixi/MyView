@@ -3,16 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyView.iml" filepath="$PROJECT_DIR$/MyView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MyView.iml" filepath="$PROJECT_DIR$/MyView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/loadanimation/loadanimation.iml" filepath="$PROJECT_DIR$/loadanimation/loadanimation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/loadanimation/loadanimation.iml" filepath="$PROJECT_DIR$/loadanimation/loadanimation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/matrixc/matrixc.iml" filepath="$PROJECT_DIR$/matrixc/matrixc.iml" />
       <module fileurl="file://$PROJECT_DIR$/matrixc/matrixc.iml" filepath="$PROJECT_DIR$/matrixc/matrixc.iml" />
       <module fileurl="file://$PROJECT_DIR$/photopicker/photopicker.iml" filepath="$PROJECT_DIR$/photopicker/photopicker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/photopicker/photopicker.iml" filepath="$PROJECT_DIR$/photopicker/photopicker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/radarview/radarview.iml" filepath="$PROJECT_DIR$/radarview/radarview.iml" />
       <module fileurl="file://$PROJECT_DIR$/radarview/radarview.iml" filepath="$PROJECT_DIR$/radarview/radarview.iml" />
     </modules>
   </component>

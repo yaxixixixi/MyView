@@ -49,13 +49,24 @@ public class SpederWeb extends View {
         shadowPaint.setAlpha(166);
 
 
+
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        final int[] location = new int[2];
+        getLocationOnScreen(location);
+        Log.i(TAG, "onMeasure: "+location[0]+">>>>"+location[1]);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
 
         super.onDraw(canvas);
-
+        final int[] location = new int[2];
+        getLocationOnScreen(location);
+        Log.i(TAG, "onDraw: "+location[0]+">>>>"+location[1]);
         if (mWidth < 50 || mHeight < 50)
             throw new IllegalStateException("the width of view is too little");
 

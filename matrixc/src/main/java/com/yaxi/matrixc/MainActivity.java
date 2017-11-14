@@ -14,4 +14,14 @@ public class MainActivity extends AppCompatActivity {
         matrixC = (MatrixC) findViewById(R.id.matrix_c);
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+
+    public static void main (String[] args){
+
+    }
 }

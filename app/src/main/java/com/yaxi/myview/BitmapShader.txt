@@ -9,3 +9,58 @@ TileMode：（一共有三种）
 CLAMP  ：如果渲染器超出原始边界范围，会复制范围内边缘染色。
 REPEAT ：横向和纵向的重复渲染器图片，平铺。
 MIRROR ：横向和纵向的重复渲染器图片，这个和REPEAT 重复方式不一样，他是以镜像方式平铺。
+
+public class ActivityThread{
+    main{
+        Looper.prepareMainLooper();
+        ActivityThread thread = new ActivityThread();
+        thread.attach();
+        if(sMainHandler == null)
+        sMainHandler = thread.getHandler();
+        Looper.loop();
+    }
+
+}
+
+public class Looper{
+
+    public void Looper(boolean quit){
+        mQueue = new MessageQueue(quit);
+        mThread = Thread.getCurrentThread();
+    }
+
+    public static Looper myLooper(){
+        return sThreadLocal.get();
+    }
+
+    public static void prepareMainLooper(){
+        prepare(false);
+        if(sMainLooper != null)
+        Throw new RuntimeException("The main Looper has already been prepared");
+        else{
+        sMainLooper = Looper.myLooper();
+        }
+
+    }
+
+    private static void prepare(boolean quit){
+        if(sThreadLocal.get() != null){
+        Throw new RuntimeException("Only one Looper may be created per thread");
+        }else{
+        sThreadLocal.set(new Looper(false));
+        }
+    }
+
+    public static void loop(){
+        Looper me = myLooper();
+        if(me == null)
+        return;
+        final MessageQueue queue = me.mQueue;
+        for(;;){
+            Message msg = queue.next();
+            if(msg == null)
+            return;
+            msg.target.dispatchMessage(msg);
+        }
+    }
+}

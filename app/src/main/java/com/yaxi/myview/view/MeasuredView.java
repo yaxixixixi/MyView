@@ -59,10 +59,14 @@ public class MeasuredView extends View {
                 Log.i(TAG, "measureWidth: MeasureSpec.EXACTLY");
                 result = size;
                 break;
+            // Note:size 是父控件即ViewGroup去掉自身的边距（调用measureChild）
+            // （可能会调用measureChildWithMargins，这时会把view自身的margins计算进去）
+            // 以后的到的可以允许的最大值（此值>=0），在EXACTLY模式下（parentView不限制），
+            // 直接使用size（parentView直接取view自身的layoutparams得到的值）作为自身的size；
+            // 在AT_MOST模式下，size用的是parentView可以允许的最大值，此时如果view内部对与size有要求则选取最小值
             case MeasureSpec.AT_MOST:
                 Log.i(TAG, "measureWidth: MeasureSpec.AT_MOST");
-                result = 400;
-                result = Math.min(result,size);
+                result = Math.min(400,size);
                 break;
             default:
                 break;

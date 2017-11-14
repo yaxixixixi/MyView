@@ -1,6 +1,11 @@
 package com.yaxi.myview;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,17 +17,25 @@ import com.yaxi.myview.view.ServiceViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BlankFragment.OnFragmentInteractionListener {
 
     private static final String TAG = "mainActivity";
     private ServiceViewPager pager;
+    private BlankFragment blankFragment;
+
+    Handler handler = new Handler(new Handler.Callback() {
+    @Override
+    public boolean handleMessage(Message msg) {
+        return false;
+    }
+});
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate: ");
-
 
         pager = (ServiceViewPager) findViewById(R.id.service_viewpager);
 
@@ -46,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(view5);
 
         pager.setPageContent(list);
+
+        blankFragment = BlankFragment.newInstance("", "");
     }
 
 
@@ -63,4 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
